@@ -46,6 +46,18 @@ current= current.next;
       System.out.print(current);
 }
 
+public void getNodo(ListNode head, int index) {
+	ListNode current = head;
+	if(current==null) {
+		System.out.println("");
+	}
+	for(int i=0; i<index;i++) {
+		current=current.next;
+	}
+	System.out.println(current.data);
+	
+}
+
 
 public int length(ListNode head) {
 if (head == null){
@@ -120,6 +132,9 @@ System.out.println();
 singlyLinkedList.addAfter(second, 45);
 singlyLinkedList.display(newHead);
 
+//get node by index
+System.out.println();
+singlyLinkedList.getNodo(newHead, 0);
 }
 
 
