@@ -58,6 +58,23 @@ public void getNodo(ListNode head, int index) {
 	
 }
 
+public void deleteNode(ListNode head, int index) {
+	ListNode anterior_borrar= head;
+	
+	if(anterior_borrar==null) {
+		System.out.println("No objetcts to delete");
+	}
+	for(int i=0; i+1<index;i++) {
+		anterior_borrar=anterior_borrar.next;
+	}
+	ListNode borrar= anterior_borrar.next;
+	anterior_borrar.next= borrar.next;
+	borrar.next=null;
+	
+	
+	
+	
+}
 
 public int length(ListNode head) {
 if (head == null){
@@ -135,6 +152,17 @@ singlyLinkedList.display(newHead);
 //get node by index
 System.out.println();
 singlyLinkedList.getNodo(newHead, 0);
+
+//deleting a node
+System.out.println();
+singlyLinkedList.deleteNode(newHead, 4);
+singlyLinkedList.display(newHead);
+
+System.out.println();
+singlyLinkedList.deleteNode(newHead, 1);
+singlyLinkedList.display(newHead);
+
+
 }
 
 
