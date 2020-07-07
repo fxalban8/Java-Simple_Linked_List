@@ -14,6 +14,18 @@ private ListNode next;
 }
 
 
+public void removeLast(ListNode head) {
+	if(head==null) {
+		return;
+	}
+	ListNode current = head;
+	while(current.next.next!=null) {
+		current=current.next;
+	}
+	current.next=null;
+}
+
+
 public void display(ListNode head){
 if (head == null){
 return;
@@ -88,6 +100,11 @@ singlyLinkedList.display(head);
 System.out.println();
 ListNode newHead = singlyLinkedList.insertAtBeginning(head, 15);
 singlyLinkedList.display(newHead);
+System.out.println();
+
+//removing the last element
+singlyLinkedList.removeLast(head);
+singlyLinkedList.display(head);
 }
 
 
