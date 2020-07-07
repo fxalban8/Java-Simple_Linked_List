@@ -12,14 +12,16 @@ private ListNode next;
 }
 
 }
+
+
 public void display(ListNode head){
 if (head == null){
 return;
 }
 
 ListNode current = head;
-while (current ==null){
-System.out.println(current.data + "---> ");
+while (current !=null){
+System.out.print(current.data + "---> ");
 current= current.next;
 }
       System.out.print(current);
@@ -46,7 +48,7 @@ if (head ==null){
   return newNode;
 }  
 newNode.next = head;
- head = newNode;
+ head = newNode;	
 return head;
 
 }
@@ -87,4 +89,7 @@ System.out.println();
 ListNode newHead = singlyLinkedList.insertAtBeginning(head, 15);
 singlyLinkedList.display(newHead);
 }
+
+
+
 }
