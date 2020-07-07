@@ -14,6 +14,13 @@ private ListNode next;
 }
 
 
+public void addAfter(ListNode current, int value) {
+	ListNode nodo = new ListNode (value);
+	nodo.next=current.next;
+	current.next=nodo;
+}
+
+
 public void removeLast(ListNode head) {
 	if(head==null) {
 		return;
@@ -38,6 +45,8 @@ current= current.next;
 }
       System.out.print(current);
 }
+
+
 public int length(ListNode head) {
 if (head == null){
 return 0;
@@ -104,7 +113,13 @@ System.out.println();
 
 //removing the last element
 singlyLinkedList.removeLast(head);
-singlyLinkedList.display(head);
+singlyLinkedList.display(newHead);
+
+//adding after a node
+System.out.println();
+singlyLinkedList.addAfter(second, 45);
+singlyLinkedList.display(newHead);
+
 }
 
 
